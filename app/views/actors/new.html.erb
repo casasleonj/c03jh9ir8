@@ -1,0 +1,41 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-3">
+			<h1>Publicar Actor</h1>
+			<%= form_for @actor do |f| %>
+				<div class="form-group">
+					<%= f.text_field :name, class: "form-control input-lg", placeholder: 'ingrese nombre del actor' %>
+				</div>
+				<div>
+					<%= f.text_area :bio, class: "form-control input-lg", placeholder: 'Ingrese la biografia' %>
+				</div>
+				<div>
+					<%= f.label :Fecha_de_nacimiento %>
+					<%= f.date_field :birth_date, class: "form-control input-lg"%>
+				</div>
+				<div>
+					<%= f.text_field :birth_place, class: "form-control input-lg", placeholder: 'Ingrese lugar de nacimiento' %>
+				</div>
+				<div>
+					<%= f.url_field :image_url, class: "form-control input-lg", placeholder: 'Ingrese url de la foto' %>
+				</div>
+				<div>
+					<%= f.label :Vivo? %>
+					<%= f.check_box :alive, class: "form-control input-lg", placeholder: 'vivo?' %>
+				</div>
+				<div>
+					<%= f.label :Fecha_de_muerte %>
+					<%= f.date_field :death_date, class: "form-control input-lg"%>
+				</div>
+				<div>
+					<%= f.text_field :birth_place, class: "form-control input-lg", placeholder: 'Ingrese lugar de muerte' %>
+				</div>
+				<div>
+					<%= f.submit "Crear Actor", class: "btn btn-primary btn-lg btn-block"%>
+				</div>
+			<% end %>
+		</div>
+		
+	</div>
+	
+</div>
